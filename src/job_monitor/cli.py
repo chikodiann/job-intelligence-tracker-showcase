@@ -17,7 +17,7 @@ def main(argv: List[str] = None) -> None:
         prog="job-monitor",
         description="Personal Remote Job Intelligence & Cashflow Monitoring System CLI",
     )
-    parser.add_argument("--profile", type=str, default=None, help="Candidate profile name or path (e.g. 'ann', 'cloud_engineer', 'virtual_assistant')")
+    parser.add_argument("--profile", type=str, default=None, help="Candidate profile name or path (e.g. 'example')")
     subparsers = parser.add_subparsers(dest="command", help="Operational commands")
 
     # Command: run
