@@ -43,7 +43,7 @@ class AppConfig(BaseModel):
     name: str = "Remote Job & Cashflow Monitor"
     version: str = "0.1.0"
     log_level: str = "INFO"
-    active_profile: str = "ann"
+    active_profile: str = "example"
     database: DatabaseConfig = Field(default_factory=DatabaseConfig)
     ingestion: IngestionConfig = Field(default_factory=IngestionConfig)
     cashflow_defaults: CashflowDefaults = Field(default_factory=CashflowDefaults)
