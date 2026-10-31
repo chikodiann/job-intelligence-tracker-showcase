@@ -9,7 +9,7 @@ logger = setup_logger("reports.generator")
 
 
 class DailyReportGenerator:
-    """Generates human-readable markdown daily job intelligence reports for Ann."""
+    """Generates human-readable markdown daily job intelligence reports."""
 
     def __init__(self, query_service: JobQueryService):
         self.query_service = query_service
@@ -82,7 +82,7 @@ class DailyReportGenerator:
 
         lines = [
             "=" * 60,
-            "ANN'S DAILY REMOTE JOB INTELLIGENCE",
+            "DAILY JOB INTELLIGENCE REPORT",
             f"Date: {today}",
             "=" * 60,
             "\nEXECUTIVE SUMMARY",
@@ -108,7 +108,7 @@ class DailyReportGenerator:
 
         # Section C: BEST TECHNICAL MATCH
         lines.append("\n3. BEST TECHNICAL MATCH")
-        lines.append("Strongest engineering alignment with Ann's Java, Spring Boot, REST API, & PostgreSQL background.\n")
+        lines.append("Strongest engineering matches based on the configured candidate profile.\n")
         lines.extend(self._format_section_records(tech_matches))
 
         # Section D: BEST LONG-TERM CAREER
