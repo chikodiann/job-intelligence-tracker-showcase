@@ -2,6 +2,7 @@ app:
   name: "Job Intelligence & Application Tracker"
   version: "0.1.0"
   log_level: "INFO"
+  active_profile: "example"
 
 database:
   path: "data/jobs.db"
@@ -32,6 +33,12 @@ ingestion:
     cryptojobs:
       enabled: true
       url: "https://cryptojobslist.com/rss.xml"
+    wwr_fullstack:
+      enabled: true
+      url: "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss"
+    wwr_devops:
+      enabled: true
+      url: "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss"
 
 # This example contains no personal candidate profile or salary preferences.
 # Add your own local profile in accordance with the application's configuration schema.
