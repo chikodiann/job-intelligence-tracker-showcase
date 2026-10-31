@@ -9,14 +9,14 @@ from pydantic import BaseModel, Field
 
 class CandidateProfile(BaseModel):
     """Candidate profile encapsulating candidate background, skills, target roles, and scoring preferences."""
-    id: str = "ann"
-    name: str = "Ann"
-    professional_title: str = "Backend & API Engineer"
-    location_country: str = "Nigeria"
-    timezone_region: str = "WAT/EMEA"
-    total_years_experience: float = 6.0
-    minimum_salary_usd: Optional[float] = 80000.0
-    minimum_hourly_usd: Optional[float] = 40.0
+    id: str = "example"
+    name: str = "Example Candidate"
+    professional_title: str = "Software Engineer"
+    location_country: str = "Not specified"
+    timezone_region: str = "UTC"
+    total_years_experience: float = 0.0
+    minimum_salary_usd: Optional[float] = None
+    minimum_hourly_usd: Optional[float] = None
 
     # Skills taxonomy
     primary_skills: Set[str] = Field(
@@ -229,7 +229,7 @@ class CandidateProfile(BaseModel):
     )
 
 
-def load_candidate_profile(profile_name_or_path: str = "ann") -> CandidateProfile:
+def load_candidate_profile(profile_name_or_path: str = "example") -> CandidateProfile:
     """Loads a CandidateProfile by name ('ann', 'cloud_engineer') or path to YAML file."""
     from ..utils.paths import AppPaths
     embedded = AppPaths.get_embedded_profile_path()
@@ -282,5 +282,5 @@ def _load_yaml_profile(filepath: Path) -> CandidateProfile:
 
 
 def get_default_candidate_profile() -> CandidateProfile:
-    """Returns baseline default candidate profile for Ann."""
+    """Returns a generic example candidate profile. Configure a YAML profile for real scoring."""
     return CandidateProfile()
