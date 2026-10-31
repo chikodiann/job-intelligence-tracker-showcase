@@ -1,0 +1,37 @@
+app:
+  name: "Job Intelligence & Application Tracker"
+  version: "0.1.0"
+  log_level: "INFO"
+
+database:
+  path: "data/jobs.db"
+  pool_timeout_seconds: 30
+
+ingestion:
+  request_timeout_seconds: 15
+  rate_limit_delay_seconds: 2.0
+  sources:
+    remotive:
+      enabled: true
+      url: "https://remotive.com/api/remote-jobs"
+    jobicy:
+      enabled: true
+      url: "https://jobicy.com/api/v2/remote-jobs"
+    weworkremotely:
+      enabled: true
+      url: "https://weworkremotely.com/remote-jobs.rss"
+    remoteok:
+      enabled: true
+      url: "https://remoteok.com/api"
+    arbeitnow:
+      enabled: true
+      url: "https://www.arbeitnow.com/api/job-board-api"
+    himalayas:
+      enabled: true
+      url: "https://himalayas.app/jobs/rss"
+    cryptojobs:
+      enabled: true
+      url: "https://cryptojobslist.com/rss.xml"
+
+# This example contains no personal candidate profile or salary preferences.
+# Add your own local profile in accordance with the application's configuration schema.
