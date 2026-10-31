@@ -59,7 +59,7 @@ class AppPaths:
         return base
 
     @classmethod
-    def get_database_path(cls, profile_id: str = "ann", default_db: Optional[str] = None) -> str:
+    def get_database_path(cls, profile_id: str = "example", default_db: Optional[str] = None) -> str:
         """Resolves profile-specific writable database path."""
         env_db_path = os.getenv("DATABASE_PATH")
         if env_db_path:
@@ -68,15 +68,15 @@ class AppPaths:
         if default_db and default_db != "data/jobs.db":
             return default_db
 
-        p = (profile_id or "ann").lower().strip()
+        p = (profile_id or "example").lower().strip()
         data_base = cls.get_user_data_dir()
 
         if p in ("example", "default") and not cls.is_packaged():
             # Dev-mode fallback for the example profile database
-            ann_path = data_base / "data" / "ann" / "jobs.db"
+            example_path = data_base / "data" / "example" / "jobs.db"
             base_path = data_base / "data" / "jobs.db"
-            if ann_path.exists():
-                return str(ann_path)
+            if example_path.exists():
+                return str(example_path)
             return str(base_path)
 
         # Isolated database directory per candidate profile
