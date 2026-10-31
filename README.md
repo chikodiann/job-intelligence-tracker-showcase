@@ -107,6 +107,7 @@ source .venv/bin/activate
 
 pip install -e ".[dev]"
 cp config.example.yaml config.yaml
+# profiles/example.yaml is an illustrative profile; edit it for your own criteria.
 job-monitor --profile example dashboard
 ```
 
