@@ -498,7 +498,7 @@ class DashboardServer:
 
         url = f"http://{self.host}:{self.port}"
         print("=" * 60)
-        print("  ANN'S JOB INTELLIGENCE DASHBOARD")
+        print("  JOB INTELLIGENCE DASHBOARD")
         print("=" * 60)
         print(f"  Status:  ACTIVE")
         print(f"  Profile: {self.candidate_profile.name} ({self.candidate_profile.id})")
