@@ -40,7 +40,7 @@ def build_notification_summary(
     if total_new == 0 and total_updated == 0:
         return None
 
-    title = "Ann's Job Intelligence"
+    title = "Job Intelligence"
     subtitle = "Open Dashboard"
 
     parts = []
@@ -119,7 +119,7 @@ class MacOSDesktopNotifier(BaseNotifier):
             return True  # Avoid noisy notification when zero matches exist
 
         top_job = ranked_matches[0][0]
-        title = "Ann's Job Intelligence"
+        title = "Job Intelligence"
         subtitle = f"{count} Relevant Opportunities Identified"
         message = f"Top Match: {top_job.title} @ {top_job.company_name}"
         return self.send_notification(title, message, subtitle)
