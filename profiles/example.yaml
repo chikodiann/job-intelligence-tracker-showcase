@@ -1,0 +1,60 @@
+# Illustrative profile for local testing only.
+# Replace this with your own criteria before using the tracker for real decisions.
+id: "example"
+name: "Example Candidate"
+professional_title: "Backend Software Engineer"
+location_country: "Example country"
+timezone_region: "UTC"
+total_years_experience: 3.0
+
+primary_skills:
+  - "java"
+  - "spring boot"
+  - "rest api"
+  - "sql"
+  - "postgresql"
+
+additional_skills:
+  - "javascript"
+  - "typescript"
+  - "node.js"
+  - "mongodb"
+
+transferable_skills:
+  - "python"
+  - "docker"
+  - "aws"
+
+secondary_skills:
+  - "technical documentation"
+  - "ai evaluation"
+
+target_titles:
+  - "backend engineer"
+  - "backend developer"
+  - "software engineer"
+  - "api engineer"
+  - "integration engineer"
+
+preferred_domains:
+  - "fintech"
+  - "saas"
+  - "banking"
+  - "enterprise"
+
+preferred_locations:
+  - "Worldwide"
+  - "EMEA"
+
+eligible_countries:
+  - "Worldwide"
+  - "EMEA"
+
+preferred_employment_types:
+  - "full_time"
+  - "contract"
+
+fast_cash_keywords:
+  - "contract"
+  - "hourly"
+  - "short-term"
