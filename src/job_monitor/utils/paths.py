@@ -45,7 +45,7 @@ class AppPaths:
         # Packaged mode: Use OS standard per-user application support directory
         if cls.is_packaged():
             if sys.platform == "darwin":
-                base = Path.home() / "Library" / "Application Support" / "AnnsJobTracker"
+                base = Path.home() / "Library" / "Application Support" / "JobIntelligenceTracker"
             elif sys.platform == "win32":
                 local_app_data = os.getenv("LOCALAPPDATA", Path.home() / "AppData" / "Local")
                 base = Path(local_app_data) / "AnnsJobTracker"
@@ -71,8 +71,8 @@ class AppPaths:
         p = (profile_id or "ann").lower().strip()
         data_base = cls.get_user_data_dir()
 
-        if p in ("ann", "default") and not cls.is_packaged():
-            # Dev mode fallback for Ann's existing baseline database
+        if p in ("example", "default") and not cls.is_packaged():
+            # Dev-mode fallback for the example profile database
             ann_path = data_base / "data" / "ann" / "jobs.db"
             base_path = data_base / "data" / "jobs.db"
             if ann_path.exists():
