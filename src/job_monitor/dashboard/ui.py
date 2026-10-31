@@ -1,4 +1,4 @@
-"""Frontend HTML/CSS/JavaScript single-page UI for Ann's Job Intelligence Dashboard & Application Tracker."""
+"""Frontend HTML/CSS/JavaScript single-page UI for Job Intelligence Dashboard & Application Tracker."""
 
 from typing import Any, Optional
 
@@ -15,7 +15,7 @@ def get_dashboard_html(candidate_profile: Optional[Any] = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ann's Job Intelligence Dashboard</title>
+  <title>Job Intelligence Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -675,7 +675,7 @@ def get_dashboard_html(candidate_profile: Optional[Any] = None) -> str:
   <header>
     <div class="header-container">
       <div class="brand-title">
-        <span>⚡</span> Ann's Job Intelligence & Application Tracker
+        <span>⚡</span> Job Intelligence & Application Tracker
       </div>
       <div class="live-clock" id="liveClock">Loading time...</div>
     </div>
