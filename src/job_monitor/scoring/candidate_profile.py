@@ -230,7 +230,7 @@ class CandidateProfile(BaseModel):
 
 
 def load_candidate_profile(profile_name_or_path: str = "example") -> CandidateProfile:
-    """Loads a CandidateProfile by name ('ann', 'cloud_engineer') or path to YAML file."""
+    """Loads a CandidateProfile by name (for example, 'example') or path to YAML file."""
     from ..utils.paths import AppPaths
     embedded = AppPaths.get_embedded_profile_path()
     if embedded and embedded.exists():
@@ -258,7 +258,7 @@ def load_candidate_profile(profile_name_or_path: str = "example") -> CandidatePr
         if p.exists() and p.is_file():
             return _load_yaml_profile(p)
 
-    # Default fallback to Ann's profile
+    # Fall back to the generic profile when no matching file exists.
     return get_default_candidate_profile()
 
 
