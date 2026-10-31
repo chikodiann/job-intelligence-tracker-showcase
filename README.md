@@ -105,8 +105,9 @@ cd job-intelligence-tracker-showcase
 python3 -m venv .venv
 source .venv/bin/activate
 
-pip install -e .
-job-monitor dashboard
+pip install -e ".[dev]"
+cp config.example.yaml config.yaml
+job-monitor --profile example dashboard
 ```
 
 Then open `http://127.0.0.1:8500`.
@@ -114,7 +115,7 @@ Then open `http://127.0.0.1:8500`.
 Run the ingestion pipeline:
 
 ```bash
-job-monitor run
+job-monitor --profile example run
 ```
 
 Run the tests:
